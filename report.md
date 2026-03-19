@@ -75,7 +75,7 @@ Query 7 also deserves a note. Neither method handled the payment authorization h
 
 ## 4. Conclusion and Limitations
 
-Llama 3.2 3B is usable for procedural e-commerce support queries — password resets, tracking instructions, email updates — where the model's general knowledge produces a correct answer without grounding in specific policy documents. For those queries, zero-shot prompting with a clear system persona is sufficient and performs consistently. The 4.18 overall zero-shot average is a reasonable starting point for a narrow, well-scoped support function.
+Llama 3.2 3B is usable for procedural e-commerce support queries — password resets, tracking instructions, email updates — where the model's general knowledge produces a correct answer without grounding in specific policy documents. For those queries, zero-shot prompting with a clear system persona is sufficient and performs consistently. The 4.32 overall zero-shot average is a reasonable starting point for a narrow, well-scoped support function.
 
 The one-shot approach failed to improve on zero-shot in this experiment, and in several cases actively degraded response quality. The core problem is that a single example at 3B scale appears to anchor the model too strongly to the example's specific framing. When the actual query requires a different kind of response, the model may overapply the pattern rather than adapt to the new context. Larger models with stronger instruction-following capabilities may handle this more gracefully, but that hypothesis would need its own evaluation to confirm.
 
