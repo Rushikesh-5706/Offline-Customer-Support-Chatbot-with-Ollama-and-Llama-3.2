@@ -112,12 +112,12 @@ Two adaptation examples: "I cannot connect to the internet after upgrading the k
 
 | Metric | Zero-Shot Average | One-Shot Average |
 |--------|------------------|-----------------|
-| Relevance | 4.00 | 4.95 |
-| Coherence | 4.45 | 5.00 |
-| Helpfulness | 3.55 | 4.75 |
-| Overall Average | 4.00 | 4.90 |
+| Relevance | 4.55 | 3.50 |
+| Coherence | 4.60 | 3.95 |
+| Helpfulness | 3.80 | 3.00 |
+| Overall Average | 4.32 | 3.48 |
 
-The most significant improvement from zero-shot to one-shot is in Helpfulness, which jumped by 1.20 points. Coherence was already high in the zero-shot condition because sentence-level fluency is largely independent of prompting strategy at this model size. The pattern suggests that the bottleneck for this use case is specificity, not fluency — the model writes good sentences regardless, but without an example it tends to stay one level of abstraction too high to be genuinely useful.
+Zero-shot outperformed one-shot across all three criteria. The widest gap is in Relevance (1.05 points), where the one-shot model consistently deflected or partially addressed queries rather than answering them directly. Coherence shows the narrowest gap (0.65 points), which makes sense: sentence-level fluency is largely unaffected by the addition of a worked example. The results suggest that the single example anchored the model too strongly to the return policy scenario, degrading its handling of queries that require a different kind of response.
 
 ## How to Run
 
