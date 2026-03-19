@@ -91,3 +91,13 @@ The Llama 3.2 model has not been downloaded yet. Run `ollama pull llama3.2:3b` a
 **Responses taking 30 or more seconds each**
 
 This is expected behavior when running inference on a CPU without GPU acceleration. The script logs a progress message after every response so you can see it is still working. If you have a machine with an NVIDIA GPU, installing the CUDA-enabled version of Ollama will reduce inference time considerably.
+
+## Optional: Explore the Dataset
+
+The repository includes `data_prep.py`, which demonstrates how the Ubuntu Dialogue Corpus was loaded and adapted into the 20 e-commerce queries used in this project. Running this script requires an internet connection on the first run, as the dataset is downloaded and cached locally by the `datasets` library.
+
+```bash
+python data_prep.py
+```
+
+This script is not required for the chatbot evaluation. It is provided for transparency and reproducibility.
