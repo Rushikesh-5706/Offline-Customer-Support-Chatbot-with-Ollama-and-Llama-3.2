@@ -61,7 +61,7 @@
 
 | Metric | Zero-Shot Average | One-Shot Average |
 |--------|------------------|-----------------|
-| Relevance | 4.35 | 3.50 |
-| Coherence | 4.40 | 3.95 |
+| Relevance | 4.55 | 3.50 |
+| Coherence | 4.60 | 3.95 |
 | Helpfulness | 3.80 | 3.00 |
-| Overall Average | 4.18 | 3.48 |
+| Overall Average | 4.32 | 3.48 |
