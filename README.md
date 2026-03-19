@@ -72,6 +72,7 @@ This project tests that question concretely. It runs 20 queries drawn from adapt
 ```
 .
 ├── chatbot.py                   # Main script: runs all 20 queries, writes results
+├── data_prep.py                 # Demonstrates Ubuntu Corpus loading and adaptation
 ├── README.md                    # This file
 ├── setup.md                     # Step-by-step installation and execution guide
 ├── report.md                    # Quantitative and qualitative analysis report
@@ -98,7 +99,7 @@ Llama 3.2 is Meta's family of small language models released in late 2024, desig
 
 Zero-shot prompting sends the model a task description and the input with no examples of what a correct output looks like. It relies entirely on the model's pre-trained knowledge and instruction-following capability. Zero-shot works well for queries that have obvious, procedural answers — resetting a password, cancelling an order — where the model's general knowledge is sufficient to produce a useful response without behavioral calibration.
 
-### One-shot prompting: definition and when it outperforms zero-shot
+### One-shot prompting: definition and when it shows value
 
 One-shot prompting adds a single demonstration — one example input paired with an ideal output — before the actual query. The model uses that example to infer the expected format, level of specificity, and tone. One-shot outperforms zero-shot most noticeably on queries where the zero-shot response is structurally correct but too vague to be actionable. Providing one example of a well-structured response appears to shift the model's output distribution toward that structure even when the query is substantively different from the example.
 
