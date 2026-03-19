@@ -101,7 +101,7 @@ Zero-shot prompting sends the model a task description and the input with no exa
 
 ### One-shot prompting: definition and when it shows value
 
-One-shot prompting adds a single demonstration — one example input paired with an ideal output — before the actual query. The model uses that example to infer the expected format, level of specificity, and tone. One-shot outperforms zero-shot most noticeably on queries where the zero-shot response is structurally correct but too vague to be actionable. Providing one example of a well-structured response appears to shift the model's output distribution toward that structure even when the query is substantively different from the example.
+One-shot prompting adds a single demonstration — one example input paired with an ideal output — before the actual query. The model uses that example to infer the expected format, level of specificity, and tone. In theory, one-shot shows its greatest value on queries where the zero-shot response is structurally correct but too vague to be actionable. In this project, however, the approach showed value only in narrow circumstances — specifically queries where the example was directly analogous to the actual question. For most queries, the example anchored the model too strongly to the return policy framing, degrading its response to unrelated questions.
 
 ## Dataset
 
