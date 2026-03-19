@@ -44,14 +44,14 @@ All inference ran on local hardware using Ollama with the `llama3.2:3b` model. N
 
 | Metric | Zero-Shot Average | One-Shot Average |
 |--------|------------------|-----------------|
-| Relevance | 4.35 | 3.50 |
-| Coherence | 4.40 | 3.95 |
+| Relevance | 4.55 | 3.50 |
+| Coherence | 4.60 | 3.95 |
 | Helpfulness | 3.80 | 3.00 |
-| Overall Average | 4.18 | 3.48 |
+| Overall Average | 4.32 | 3.48 |
 
-The headline result contradicts the initial hypothesis: zero-shot prompting outperformed one-shot prompting across all three criteria. The overall gap of 0.70 points in favor of zero-shot is not a measurement artifact — it reflects genuine failures in the one-shot condition that do not appear in zero-shot. The most likely explanation is that the single worked example, which describes how to handle a return, anchored the model too strongly to that specific scenario. When the actual query was structurally different, the model occasionally overfit to the example pattern rather than reasoning freshly from the system prompt.
+The headline result contradicts the initial hypothesis: zero-shot prompting outperformed one-shot prompting across all three criteria. The overall gap of 0.84 points in favor of zero-shot is not a measurement artifact — it reflects genuine failures in the one-shot condition that do not appear in zero-shot. The most likely explanation is that the single worked example, which describes how to handle a return, anchored the model too strongly to that specific scenario. When the actual query was structurally different, the model occasionally overfit to the example pattern rather than reasoning freshly from the system prompt.
 
-Helpfulness shows the widest gap: 3.80 for zero-shot versus 3.00 for one-shot, a difference of 0.80 points. Coherence is closest: 4.40 versus 3.95, a difference of 0.45. This pattern is worth paying attention to. The one-shot model writes grammatically coherent sentences — it has not lost the ability to construct readable prose — but its responses are less useful because they sometimes give wrong information or deflect in ways the zero-shot model does not. Coherence measures fluency; Helpfulness measures function. The one-shot condition degraded function more than fluency.
+Relevance shows the widest gap: 4.55 for zero-shot versus 3.50 for one-shot, a difference of 1.05 points. The one-shot model's most significant failure was not helpfulness but relevance — it frequently produced responses that addressed the general topic rather than the specific question asked. Coherence shows the narrowest gap: 4.60 versus 3.95, a difference of 0.65. This pattern is worth paying attention to. The one-shot model writes grammatically coherent sentences — it has not lost the ability to construct readable prose — but its responses are less useful because they sometimes give wrong information or deflect in ways the zero-shot model does not. Coherence measures fluency; Helpfulness measures function. The one-shot condition degraded function more than fluency.
 
 ### 3.2 Qualitative Observations
 
